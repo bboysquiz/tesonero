@@ -1,0 +1,186 @@
+@import '../../variables.sass'
+
+.features
+    &__container
+        width: 704px
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+    &__title
+        width: 100%
+        font-family: Roboto-Bold
+        font-weight: 700
+        font-size: 40px
+        line-height: 46.88px
+        color: $text-dark
+        position: relative
+        text-align: center
+        padding: 0 70px
+        margin: 0
+        &::before
+            content: ''
+            width: 184px
+            height: 4px
+            background-color: $green
+            top: -18px
+            left: 50%
+            margin-left: -92px
+            position: absolute
+    &__subtitle
+        color: $text-dark
+        font-family: Roboto-Regular
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+    &__list
+        list-style-type: none
+        margin-top: 27px
+        &-item
+            display: flex
+            justify-content: flex-start
+            flex-wrap: wrap
+            align-items: center
+            width: 704px
+            cursor: pointer
+    &__img
+        margin-right: 24px
+        width: 40px
+        height: 40px
+    &__text
+        margin-right: 148px
+        font-family: Roboto-Bold
+        font-weight: 700
+        font-size: 24px
+        line-height: 28.13px
+        color: $text-dark
+        width: 473px
+        transition: .3s
+        z-index: 2
+        &_active
+            color: $green
+            transition: .3s
+    &__icon
+        width: 19px
+        height: 10.5px
+        transition: .3s
+        &_active
+            transition: .3s
+            transform: rotate(180deg)
+    &__describe
+        display: none
+        &_active
+            display: inline-block
+            color: $text-dark
+            font-weight: 400
+            font-family: Roboto-Regular
+            font-size: 16px
+            line-height: 18.75px
+            margin-left: 64px
+            animation: appear .5s ease-in-out
+            z-index: 0
+        &_disable
+            display: inline-block
+            color: $text-dark
+            font-weight: 400
+            font-family: Roboto-Regular
+            font-size: 16px
+            line-height: 18.75px
+            margin-left: 64px
+            animation: disappear .5s ease-in-out
+            z-index: 0
+            margin-top: -40px
+    &__content-cover
+        z-index: 2
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        background-color: #fff
+
+@keyframes appear
+    0%
+        margin-top: -40px
+    100%
+        margin-top: 16px
+@keyframes disappear
+    0%
+        margin-top: 16px
+    100%
+        margin-top: -40px
+@media screen and ( max-width: 1920px )
+    .features
+        &__container
+            width: 454px
+        &__list
+            &-item
+                width: 454px
+        &__text
+            margin-right: 10px
+            font-size: 17px
+            width: 340px
+        &__img
+            margin-right: 10px
+        &__describe
+            &_active
+                width: 340px
+                margin-left: 52px
+            &_disable
+                margin-left: 52px
+                margin-top: -64px
+                width: 340px
+    @keyframes appear
+        0%
+            margin-top: -64px
+        100%
+            margin-top: 16px
+    @keyframes disappear
+        0%
+            margin-top: 16px
+        100%
+            margin-top: -64px
+@media screen and ( max-width: 1280px )
+    .features
+        &__container
+            margin-top: 119px
+@media screen and ( max-width: 768px )
+    .features
+        &__container
+            width: 288px
+            margin-top: 80px
+        &__title
+            font-size: 24px
+            line-height: 28.13px
+        &__subtitle
+            font-size: 16px
+            line-height: 24px
+        &__img
+            display: none
+        &__list
+            padding: 0
+            &-item
+                width: 288px
+        &__content
+            &-cover
+                width: 288px
+                height: 90px
+        &__text
+            font-size: 16px
+            line-height: 18.75px
+            width: 269px
+        &__describe
+            font-size: 16px
+            line-height: 18.75px
+            &_active
+                margin-left: 0
+            &_disable
+                margin-left: 0
+                margin-top: -90px
+    @keyframes appear
+        0%
+            margin-top: -90px
+        100%
+            margin-top: 16px
+    @keyframes disappear
+        0%
+            margin-top: 16px
+        100%
+            margin-top: -90px

@@ -1,0 +1,133 @@
+@import '../../variables.sass'
+.reviews
+    &__container
+        width: 747px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__title
+        width: 100%
+        font-family: Roboto-Bold
+        font-weight: 700
+        font-size: 40px
+        line-height: 49.88px
+        color: $text-dark
+        position: relative
+        text-align: center
+        margin: 0
+        &::before
+           content: ''
+           width: 184px
+           height: 4px
+           background-color: $green 
+           top: -18px
+           left: 50%
+           margin-left: -92px
+           position: absolute
+    &__main
+        &-block
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-wrap: wrap
+            width: 747px
+        &-avatar
+            width: 187px
+            height: 187px
+        &-text
+            width: 489px
+            font-family: Roboto-Regular
+            font-weight: 400
+            font-size: 16px
+            line-height: 24px
+            position: relative
+            &::before
+                background: url('../../assets/quotes.svg') no-repeat center
+                content: ''
+                width: 40px
+                height: 26px
+                position: absolute
+                top: 0
+                left: -52px
+            &::after
+                background: url('../../assets/quotes.svg') no-repeat center
+                content: ''
+                width: 40px
+                height: 26px
+                position: absolute
+                bottom: 0
+                right: -20px
+                transform: rotate(180deg)
+    &__text
+        margin-bottom: 0
+        margin-top: 0
+        &_distinct
+            font-family: Roboto-Bold
+            font-weight: 700
+            line-height: 18.75px
+            display: inline-block
+            width: 100%
+            margin-top: 10px
+    &__block
+        display: flex
+        justify-content: space-between
+        margin-top: 134px
+        width: 339px
+    &__text
+        font-family: Roboto-Regular
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: $text-dark
+    &__avatar
+        width: 97px
+        height: 97px
+
+@media screen and ( max-width: 1920px )
+    .reviews
+        &__container 
+            width: 520px
+            justify-content: space-between
+        &__main
+            &-avatar
+                width: 130px
+                height: 130px
+            &-text
+                width: 350px
+                font-size: 14px
+                line-height: 20px
+            &-block
+                margin-top: 20px
+        &__block
+            margin-top: 50px
+            width: 244px
+        &__text
+            font-size: 14px
+            line-height: 19px
+            margin-top: 0
+            margin-bottom: 0
+        &__avatar
+            width: 70px
+            height: 70px
+@media screen and ( max-width: 768px )
+    .reviews
+        &__container 
+            width: 320px
+            margin-top: 76px
+            justify-content: center
+        &__title
+            font-size: 24px
+            line-height: 28.13px
+        &__main
+            &-block
+                justify-content: center
+                width: 288px
+            &-text
+                width: 288px
+                text-align: center
+                &::before
+                    top: -30px
+                    left: 20px
+                &::after
+                    top: -30px
+                    right: 20px

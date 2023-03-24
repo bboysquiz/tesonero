@@ -1,0 +1,51 @@
+@import '../../variables.sass'
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap')
+.header
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 1920px
+        padding: 30px 84px 37.25px 87px
+        margin: 0 auto
+        background-color: #fff
+    &__logo
+        width: 304px
+        height: 92px
+    &__button
+        background-color: $green
+        width: 117px
+        height: 32px
+        display: flex
+        justify-content: center
+        align-items: center
+        box-shadow: 0px 8px 16px rgba(0, 195, 104, .4)
+        border-radius: 8px
+        color: #fff
+        font-family: Roboto-Regular
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        border: none
+        cursor: pointer
+@media screen and ( max-width: 1920px )
+    .header
+        &__container 
+            width: 1280px
+            padding-left: 0
+            padding-right: 0
+@media screen and ( max-width: 1280px )
+    .header
+        &__container 
+            width: 768px
+        &__logo
+            width: 180px
+            height: 55px
+@media screen and ( max-width: 768px )
+    .header
+        &__container 
+            width: 320px
+        &__logo
+            width: 320px
+        &__button
+            display: none

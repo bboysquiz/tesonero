@@ -1,0 +1,143 @@
+@import '../../variables.sass'
+.mainScreen
+    background: linear-gradient(111.04deg, #E2E2E2 0.39%, rgba(255, 255, 255, 0) 86.46%)
+    &__container
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        padding-top: 101px
+        width: 1920px
+        position: relative
+        margin: 0 auto
+    &__title
+        font-family: Roboto-Bold
+        font-weight: 700
+        font-size: 40px
+        line-height: 46.88px
+        color: $text-dark
+        text-transform: uppercase
+        position: relative
+        width: 100%
+        text-align: center
+        &::before
+            content: ''
+            width: 184px
+            height: 4px
+            background-color: $green
+            top: -22px
+            left: 50%
+            margin-left: -92px
+            position: absolute
+    &__block
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        &-wrapper
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            width: 852px
+            margin-top: 69px
+            padding-bottom: 93px
+            &_mobile
+                display: none
+        &-text
+            font-family: Roboto-Regular
+            font-weight: 400
+            font-size: 16px
+            line-height: 18.75px
+            color: $text-dark
+            text-align: center
+            margin-top: 20px
+            width: 176px
+    &__main
+        &-img
+            width: 436px
+            &_mobile
+                display: none
+    &__parallax
+        &-block
+            position: absolute
+        &-image
+            width: 100%
+.block-left
+    width: 442.06px
+    height: 447.48px
+    bottom: 0
+    left: 0
+.block-right
+    width: 588.26px
+    height: 519.2px
+    top: 0
+    right: 0
+
+.top-block-wrapper
+    display: flex
+    justify-content: space-between
+    width: 464px
+.middle-block-wrapper
+    display: flex
+    justify-content: space-between
+    width: 852px
+    align-items: center
+.bottom-block-wrapper
+    display: flex
+    justify-content: space-between
+    width: 464px
+
+@media screen and ( max-width: 1920px )
+    .mainScreen
+        &__container 
+            width: 1280px
+@media screen and ( max-width: 1280px )
+    .mainScreen
+        &__container 
+            width: 768px
+    .middle-block-wrapper
+        width: 768px
+@media screen and ( max-width: 768px )
+    .mainScreen
+        background: #fff
+        &__container 
+            width: 320px
+            padding-bottom: 63px
+        &__title
+            width: 288px
+            font-size: 24px
+            line-height: 28.13px
+        &__main
+            &-img
+                &_mobile
+                    display: block
+                    width: 218px
+        &__block
+            &-wrapper
+                display: none
+                &_mobile
+                    display: block
+                    width: 200px
+        &__slider
+            &-item
+                width: 200px
+                display: flex!important
+                justify-content: center
+                flex-wrap: wrap
+    .slick
+        &-arrow
+            bottom: -63px
+            top: inherit!important
+        &-prev
+            background: url('../../assets/arrow-slider.svg') no-repeat center!important
+            &::before
+                content: ''!important
+        &-next
+            background: url('../../assets/arrow-slider.svg') no-repeat center!important
+            transform: rotate(180deg)!important
+            bottom: -54px
+            &::before
+                content: ''!important
+        &-dots
+            bottom: -55px!important
+        
+        
+
